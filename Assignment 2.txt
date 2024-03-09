@@ -1,0 +1,96 @@
+Assignment 2
+------------------------------------------------------------------------------
+
+What will the following commands do? 
+
+->
+
+1. `echo "Hello, World!"`
+   - This command will simply print the text "Hello, World!" to the terminal.
+
+2. `name="Productive"`
+   - This command will create a variable named `name` and assign it the value "Productive".
+
+3. `touch file.txt`
+   - This command will create an empty file named `file.txt`.
+
+4. `ls -a`
+   - This command will list all files and directories in the current directory, including hidden files (those whose names start with a dot).
+
+5. `rm file.txt`
+   - This command will delete the file named `file.txt`.
+
+6. `cp file1.txt file2.txt`
+   - This command will make a copy of the file named `file1.txt` and name the copy `file2.txt`.
+
+7. `mv file.txt /path/to/directory/`
+   - This command will move the file named `file.txt` to the directory specified by `/path/to/directory/`.
+
+8. `chmod 755 script.sh`
+   - This command will change the permissions of the file named `script.sh` to allow the owner to read, write, and execute the file, and allow others to read and execute the file.
+
+9. `grep "pattern" file.txt`
+   - This command will search for lines containing the specified pattern in the file named `file.txt` and print those lines.
+
+10. `kill PID`
+    - This command will send a signal to the process with the specified PID (Process ID) to terminate it.
+
+11. `mkdir mydir && cd mydir && touch file.txt && echo "Hello, World!" > file.txt && cat file.txt`
+    - This command will create a directory named `mydir`, change into that directory, create a file named `file.txt`, write the text "Hello, World!" into `file.txt`, and then display the contents of `file.txt`.
+
+12. `ls -l | grep ".txt"`
+    - This command will list all files and directories in the current directory in long format, and then filter out only the lines containing ".txt" using `grep`.
+
+13. `cat file1.txt file2.txt | sort | uniq`
+    - This command will concatenate the contents of `file1.txt` and `file2.txt`, sort the lines alphabetically, and then remove duplicate lines.
+
+14. `ls -l | grep "^d"`
+    - This command will list all files and directories in the current directory in long format, and then filter out only the lines representing directories using `grep`.
+
+15. `grep -r "pattern" /path/to/directory/`
+    - This command will recursively search for the specified pattern in all files within the directory `/path/to/directory/`.
+
+16. `cat file1.txt file2.txt | sort | uniq -d`
+    - This command will concatenate the contents of `file1.txt` and `file2.txt`, sort the lines alphabetically, and then display only the duplicate lines.
+
+17. `chmod 644 file.txt`
+    - This command will change the permissions of the file named `file.txt` to allow the owner to read and write the file, and allow others to read the file.
+
+18. `cp -r source_directory destination_directory`
+    - This command will recursively copy the contents of `source_directory` to `destination_directory`.
+
+19. `find /path/to/search -name "*.txt"`
+    - This command will search for files with the extension ".txt" within the directory `/path/to/search`.
+
+20. `chmod u+x file.txt`
+    - This command will add execute permission for the owner of the file named `file.txt`.
+
+21. `echo $PATH`
+    - This command will print the value of the environment variable `PATH`, which contains a colon-separated list of directories where executable files are located.
+
+-------------------------------------------------------------------------------
+part B true or false
+
+Answers
+
+1. True: `ls` is indeed used to list files and directories in a directory.
+2. True: `mv` is used to move files and directories.
+3. False: `cd` is used to change directories, not to copy files and directories.
+4. True: `pwd` does stand for "print working directory" and displays the current directory.
+5. True: `grep` is used to search for patterns in files.
+6. True: `chmod 755 file.txt` indeed gives read, write, and execute permissions to the owner, and read and execute permissions to the group and others.
+7. True: `mkdir -p directory1/directory2` creates nested directories, creating `directory2` inside `directory1` if `directory1` does not exist.
+8. True: `rm -rf file.txt` deletes a file forcefully without confirmation.
+
+identify the incorrct commands***********************************
+
+1. Incorrect: `chmodx` is not the correct command to change file permissions. The correct command is `chmod`.
+2. Incorrect: `cpy` is not the correct command to copy files and directories. The correct command is `cp`.
+3. Incorrect: `mkfile` is not the correct command to create a new file. The correct command is `touch`.
+4. Incorrect: `catx` is not the correct command to concatenate files. The correct command is `cat`.
+5. Incorrect: `rn` is not the correct command to rename files. The correct command is `mv`.
+
+-------------------------------------------------------------------------------
+
+part c
+

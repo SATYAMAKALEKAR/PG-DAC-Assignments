@@ -1,0 +1,539 @@
+------------------------------------------------------
+this answer works well
+
+satyam@TUF:~/home/LinuxAssignment$ cd ..
+satyam@TUF:~/home$ ls
+LinuxAssignment  hushlogin
+satyam@TUF:~/home$ cd LinuxAssignment
+satyam@TUF:~/home/LinuxAssignment$ nano file1.txt
+satyam@TUF:~/home/LinuxAssignment$ ls
+file1.txt
+satyam@TUF:~/home/LinuxAssignment$ cat file1.txt
+This is the sample text.....
+The content is for testing purpose only...
+Thank You!!!
+satyam@TUF:~/home/LinuxAssignment$ mkdir docs
+satyam@TUF:~/home/LinuxAssignment$ cp file1.txt docs/file2.txt
+satyam@TUF:~/home/LinuxAssignment$ cd docs
+satyam@TUF:~/home/LinuxAssignment/docs$ ls
+file2.txt
+satyam@TUF:~/home/LinuxAssignment/docs$ cat file2.txt
+This is the sample text.....
+The content is for testing purpose only...
+Thank You!!!
+satyam@TUF:~/home/LinuxAssignment/docs$
+satyam@TUF:~/home/LinuxAssignment/docs$ chmod 744 file2.txt
+satyam@TUF:~/home/LinuxAssignment/docs$ ls -l file2.txt
+-rwxr--r-- 1 satyam satyam 85 Mar  7 21:04 file2.txt
+satyam@TUF:~/home/LinuxAssignment/docs$
+satyam@TUF:~/home/LinuxAssignment$ cdmod 744 docs/file2.txt
+Command 'cdmod' not found, did you mean:
+  command 'chmod' from deb coreutils (8.32-4.1ubuntu1)
+Try: sudo apt install <deb name>
+satyam@TUF:~/home/LinuxAssignment$ sudo chown $USER docs.file2.txt
+[sudo] password for satyam:
+chown: cannot access 'docs.file2.txt': No such file or directory
+satyam@TUF:~/home/LinuxAssignment$ sudo chown $USER docs/file2.txt
+satyam@TUF:~/home/LinuxAssignment$ ls
+satyam@TUF:~/home/LinuxAssignment$ ls
+docs  file1.txt
+satyam@TUF:~/home/LinuxAssignment$ cd ..
+satyam@TUF:~/home$ ls
+LinuxAssignment  hushlogin
+satyam@TUF:~/home$ find . -type f -name "*.txt"
+./LinuxAssignment/file1.txt
+./LinuxAssignment/docs/file2.txt
+satyam@TUF:~/home/LinuxAssignment/docs$ grep "file" file2.txt
+satyam@TUF:~/home/LinuxAssignment/docs$ cat file2.txt
+This is the sample text.....
+The content is for testing purpose only...
+Thank You!!!
+satyam@TUF:~/home/LinuxAssignment/docs$ grep "content" file2.txt
+The content is for testing purpose only...
+satyam@TUF:~/home/LinuxAssignment/docs$ date
+Sat Mar  9 00:57:34 IST 2024cd
+satyam@TUF:~/home/LinuxAssignment/docs$ date
+Sat Mar  9 00:57:34 IST 2024
+satyam@TUF:~/home/LinuxAssignment/docs$ hostname -I
+172.21.138.206
+satyam@TUF:~/home/LinuxAssignment/docs$ ping remote_server_address
+ping: remote_server_address: Name or service not known
+satyam@TUF:~/home/LinuxAssignment/docs$ zip -r docs.zip docs
+Command 'zip' not found, but can be installed with:
+sudo apt install zip
+satyam@TUF:~/home/LinuxAssignment/docs$ sudo apt install zip
+[sudo] password for satyam:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  unzip
+The following NEW packages will be installed:
+  unzip zip
+0 upgraded, 2 newly installed, 0 to remove and 31 not upgraded.
+Need to get 350 kB of archives.
+After this operation, 930 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 unzip amd64 6.0-26ubuntu3.2 [175 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 zip amd64 3.0-12build2 [176 kB]
+Fetched 350 kB in 2s (145 kB/s)
+Selecting previously unselected package unzip.
+(Reading database ... 24225 files and directories currently installed.)
+Preparing to unpack .../unzip_6.0-26ubuntu3.2_amd64.deb ...
+Unpacking unzip (6.0-26ubuntu3.2) ...
+Selecting previously unselected package zip.
+Preparing to unpack .../zip_3.0-12build2_amd64.deb ...
+Unpacking zip (3.0-12build2) ...
+Setting up unzip (6.0-26ubuntu3.2) ...
+Setting up zip (3.0-12build2) ...
+Processing triggers for man-db (2.10.2-1) ...
+satyam@TUF:~/home/LinuxAssignment/docs$ zip -r docs.zip docs
+        zip warning: name not matched: docs
+zip error: Nothing to do! (try: zip -r docs.zip . -i docs)
+satyam@TUF:~/home/LinuxAssignment/docs$ zip -r docs.zip . -i docs
+        zip warning: zip file empty
+satyam@TUF:~/home/LinuxAssignment/docs$ mkdir extracteddocs
+satyam@TUF:~/home/LinuxAssignment/docs$ unzip docs.zip -d extracteddocs
+Archive:  docs.zip
+warning [docs.zip]:  zipfile is empty
+satyam@TUF:~/home/LinuxAssignment/docs$ cd ..
+satyam@TUF:~/home/LinuxAssignment$ ls
+docs  file1.txt
+satyam@TUF:~/home/LinuxAssignment$ nano file1.txt
+satyam@TUF:~/home/LinuxAssignment$ cat file1.txt
+This assignment is very hard....
+This is the sample text.....
+The content is for testing purpose only...
+Thank You!!!
+hard work babyyyy hard work!!!!
+let's gooooooo......
+satyam@TUF:~/home/LinuxAssignment$ sed -i 's/hard/easy/g' file1.txt
+satyam@TUF:~/home/LinuxAssignment$ cat file1.txt
+This assignment is very easy....
+This is the sample text.....
+The content is for testing purpose only...
+Thank You!!!
+easy work babyyyy easy work!!!!
+let's gooooooo......
+
+
+with that here problem 1 completed after giving a very hard time...
+cheers to the next one.........
+
+---------------------------------------------------------------------
+Problem 2
+
+ satyam@TUF:~/home/LinuxAssignment$ touch data.txt
+satyam@TUF:~/home/LinuxAssignment$ ls
+data.txt  docs  file1.txt
+satyam@TUF:~/home/LinuxAssignment$ vi data.txt
+satyam@TUF:~/home/LinuxAssignment$ cat data.txt
+CDAC MUMBAI
+Concepts of Operating System
+Assignment 1
+Problem 1: Read the instructions carefully and answer accordingly. If there is
+any need to insert some data then do that as well.
+a) Navigate and List:
+a. Start by navigating to your home directory and list its contents. Then, move into a
+directory named "LinuxAssignment" if it exists; otherwise, create it.
+b) File Management:
+a. Inside the "LinuxAssignment" directory, create a new file named "file1.txt". Display its
+contents.
+c) Directory Management:
+a. Create a new directory named "docs" inside the "LinuxAssignment" directory.
+d) Copy and Move Files:
+a. Copy the "file1.txt" file into the "docs" directory and rename it to "file2.txt".
+e) Permissions and Ownership:
+a. Change the permissions of "file2.txt" to allow read, write, and execute permissions for
+the owner and only read permissions for others. Then, change the owner of "file2.txt" to
+the current user.
+f) Final Checklist:
+a. Finally, list the contents of the "LinuxAssignment" directory and the root directory to
+ensure that all operations were performed correctly.
+g) File Searching:
+a. Search for all files with the extension ".txt" in the current directory and its subdirectories.
+b. Display lines containing a specific word in a file (provide a file name and the specific
+word to search).
+h) System Information:
+a. Display the current system date and time.
+i) Networking:
+a. Display the IP address of the system.
+b. Ping a remote server to check connectivity (provide a remote server address to ping).
+j) File Compression:
+a. Compress the "docs" directory into a zip file.
+b. Extract the contents of the zip file into a new directory.
+k) File Editing:
+a. Open the "file1.txt" file in a text editor and add some text to it.
+b. Replace a specific word in the "file1.txt" file with another word (provide the original
+word and the word to replace it with).
+satyam@TUF:~/home/LinuxAssignment$ head -n 10 data.txt
+CDAC MUMBAI
+Concepts of Operating System
+Assignment 1
+Problem 1: Read the instructions carefully and answer accordingly. If there is
+any need to insert some data then do that as well.
+a) Navigate and List:
+a. Start by navigating to your home directory and list its contents. Then, move into a
+directory named "LinuxAssignment" if it exists; otherwise, create it.
+b) File Management:
+a. Inside the "LinuxAssignment" directory, create a new file named "file1.txt". Display its
+satyam@TUF:~/home/LinuxAssignment$ tail -n 5 data.txt
+b. Extract the contents of the zip file into a new directory.
+k) File Editing:
+a. Open the "file1.txt" file in a text editor and add some text to it.
+b. Replace a specific word in the "file1.txt" file with another word (provide the original
+word and the word to replace it with).
+satyam@TUF:~/home/LinuxAssignment$ touch numbers.txt
+satyam@TUF:~/home/LinuxAssignment$ ls
+data.txt  docs  file1.txt  numbers.txt
+satyam@TUF:~/home/LinuxAssignment$ vi numbers.txt
+satyam@TUF:~/home/LinuxAssignment$ cat numbers.txt
+1 march
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31 March
+
+
+satyam@TUF:~/home/LinuxAssignment$ head -n 15 numbers.txt
+1 march
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+satyam@TUF:~/home/LinuxAssignment$ tail -n 3 numbers.txt
+31 March
+
+
+satyam@TUF:~/home/LinuxAssignment$ touch input.txt
+satyam@TUF:~/home/LinuxAssignment$ ls
+data.txt  docs  file1.txt  input.txt  numbers.txt
+satyam@TUF:~/home/LinuxAssignment$ vi input.txt
+satyam@TUF:~/home/LinuxAssignment$ tr '[:lower:]' '[:upper:]' < input.txt >
+output.txt
+satyam@TUF:~/home/LinuxAssignment$ ls
+data.txt  docs  file1.txt  input.txt  numbers.txt  output.txt
+satyam@TUF:~/home/LinuxAssignment$ cat input.txt
+UFC 299: O'Malley vs. Vera 2 is an upcoming mixed martial arts event produced by the Ultimate Fighting Championship that will take place on March 9, 2024, at the Kaseya Center in Miami, Florida, United States.[1][2]
+
+Background
+The event will mark the promotion's third visit to Miami and first since UFC 287 in April 2023.[2]
+
+A UFC Bantamweight Championship bout between current champion Sean O'Malley and Marlon Vera is expected to headline the event.[3] The pair previously met at UFC 252 in August 2020 which Vera won by first round TKO.[4] Merab Dvalishvili is expected to serve as backup and potential replacement for this fight.[5]
+
+A five round lightweight bout between former interim UFC Lightweight Champion Dustin Poirier and Benoît Saint Denis is expected to take place in the co-main event.[6] The bout was briefly in jeopardy when Poirier indicated the bout would not take place as he had never signed a contract and he was unable to come to terms with the promotion.[7] However, Poirier shortly thereafter retracted his statement describing it as a misunderstanding.[8]
+satyam@TUF:~/home/LinuxAssignment$ cat output.txt
+UFC 299: O'MALLEY VS. VERA 2 IS AN UPCOMING MIXED MARTIAL ARTS EVENT PRODUCED BY THE ULTIMATE FIGHTING CHAMPIONSHIP THAT WILL TAKE PLACE ON MARCH 9, 2024, AT THE KASEYA CENTER IN MIAMI, FLORIDA, UNITED STATES.[1][2]
+
+BACKGROUND
+THE EVENT WILL MARK THE PROMOTION'S THIRD VISIT TO MIAMI AND FIRST SINCE UFC 287 IN APRIL 2023.[2]
+
+A UFC BANTAMWEIGHT CHAMPIONSHIP BOUT BETWEEN CURRENT CHAMPION SEAN O'MALLEY AND MARLON VERA IS EXPECTED TO HEADLINE THE EVENT.[3] THE PAIR PREVIOUSLY MET AT UFC 252 IN AUGUST 2020 WHICH VERA WON BY FIRST ROUND TKO.[4] MERAB DVALISHVILI IS EXPECTED TO SERVE AS BACKUP AND POTENTIAL REPLACEMENT FOR THIS FIGHT.[5]
+
+A FIVE ROUND LIGHTWEIGHT BOUT BETWEEN FORMER INTERIM UFC LIGHTWEIGHT CHAMPION DUSTIN POIRIER AND BENOîT SAINT DENIS IS EXPECTED TO TAKE PLACE IN THE CO-MAIN EVENT.[6] THE BOUT WAS BRIEFLY IN JEOPARDY WHEN POIRIER INDICATED THE BOUT WOULD NOT TAKE PLACE AS HE HAD NEVER SIGNED A CONTRACT AND HE WAS UNABLE TO COME TO TERMS WITH THE PROMOTION.[7] HOWEVER, POIRIER SHORTLY THEREAFTER RETRACTED HIS STATEMENT DESCRIBING IT AS A MISUNDERSTANDING.[8]
+satyam@TUF:~/home/LinuxAssignment$ touch duplicate.txt
+satyam@TUF:~/home/LinuxAssignment$ ls
+data.txt  duplicate.txt  input.txt    output.txt
+docs      file1.txt      numbers.txt
+satyam@TUF:~/home/LinuxAssignment$ vi duplicate.txt
+satyam@TUF:~/home/LinuxAssignment$ sort duplicate.txt | uniq
+at the end of the day
+at the end of the day that is all that matter
+he got so much better at the end of the day
+it was all good
+that is all it.....     :
+we all have been doing this since the begining of the end
+you will get it at the end of the day....
+satyam@TUF:~/home/LinuxAssignment$ vi duplicate.txt
+satyam@TUF:~/home/LinuxAssignment$ cat duplicate.txt
+it was all good
+at the end of the day
+he got so much better at the end of the day
+at the end of the day that is all that matter
+we all have been doing this since the begining of the end
+you will get it
+at the end of the day"
+that is all it.....--------
+satyam@TUF:~/home/LinuxAssignment$ sort duplicate.txt | uniq
+at the end of the day
+at the end of the day that is all that matter
+at the end of the day"
+he got so much better at the end of the day
+it was all good
+that is all it.....--------
+we all have been doing this since the begining of the end
+you will get it
+satyam@TUF:~/home/LinuxAssignment$ vi duplicate.txt
+satyam@TUF:~/home/LinuxAssignment$ cat duplicate.txt
+it was all good
+at the end of the day
+he got so much better at the end of the day
+at the end of the day that is all that matter
+we all have been doing this since the begining of the end
+you will get it
+at the end of the day
+that is all it.....--------
+satyam@TUF:~/home/LinuxAssignment$ sort duplicate.txt | uniq
+at the end of the day
+at the end of the day
+at the end of the day that is all that matter
+he got so much better at the end of the day
+it was all good
+that is all it.....--------
+we all have been doing this since the begining of the end
+you will get it
+satyam@TUF:~/home/LinuxAssignment$ touch fruit.txt
+satyam@TUF:~/home/LinuxAssignment$ ls
+data.txt  duplicate.txt  fruit.txt  numbers.txt
+docs      file1.txt      input.txt  output.txt
+satyam@TUF:~/home/LinuxAssignment$ vi fruit.txt
+satyam@TUF:~/home/LinuxAssignment$ cat fruit.txt
+What are the top 10 fruits in India?
+The Top 10 Fruits in India You Should Be Eating
+In conclusion, the top 10 fruits in India are
+Indian Gooseberry
+Jackfruit
+Banana
+Pomegranate
+Mango
+Watermelon
+Apple
+Peaches
+Pears
+Papaya
+
+
+This article looks at the nutrition and the many and varied health benefits of these and other fruits.
+Grapefruit
+Blackberry
+Apple
+Pomegranate
+Pineapple
+Bananas
+Avocado
+satyam@TUF:~/home/LinuxAssignment$ sort fruit.txt | uniq -c
+      2
+      2 Apple
+      1 Avocado
+      1 Banana
+      1 Bananas
+      1 Blackberry
+      1 Grapefruit
+      1 In conclusion, the top 10 fruits in India are
+      1 Indian Gooseberry
+      1 Jackfruit
+      1 Mango
+      1 Papaya
+      1 Peaches
+      1 Pears
+      1 Pineapple
+      1 Pomegranate
+      1 Pomegranate
+      1 The Top 10 Fruits in India You Should Be Eating
+      1 This article looks at the nutrition and the many and varied health benefits of these and other fruits.
+      1 Watermelon
+      1 What are the top 10 fruits in India?
+satyam@TUF:~/home/LinuxAssignment$ this assignment is now completed successf
+ully
+Yesssssss finally done it.......
+
+
+--------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+initial tryons
+
+satyam@TUF:~/home$ ls
+hushlogin
+satyam@TUF:~/home$ mkdir assignments
+satyam@TUF:~/home$ cd assignments
+satyam@TUF:~/home/assignments$ rmdir assignments
+rmdir: failed to remove 'assignments': No such file or directory
+satyam@TUF:~/home/assignments$ cd ..
+satyam@TUF:~/home$ rmdir assignments
+satyam@TUF:~/home$ ls
+hushlogin
+satyam@TUF:~/home$ mkdir LinuxAssignment | cd LinuxAssignment
+-bash: cd: LinuxAssignment: No such file or directory
+satyam@TUF:~/home$ ls
+LinuxAssignment  hushlogin
+satyam@TUF:~/home$ cd LinuxAssignsment
+-bash: cd: LinuxAssignsment: No such file or directory
+satyam@TUF:~/home$ cd LinuxAssignment
+satyam@TUF:~/home/LinuxAssignment$ mkdir file1.txt
+satyam@TUF:~/home/LinuxAssignment$ ls
+file1.txt
+satyam@TUF:~/home/LinuxAssignment$ cd file1.txt
+satyam@TUF:~/home/LinuxAssignment/file1.txt$ cat > file1.txt
+This is the content in the text file file1
+satyam@TUF:~/home/LinuxAssignment/file1.txt$ cat > file1.txt
+
+This is the file1satyam@TUF:~/home/LinuxAssignment/file1.txt$
+satyam@TUF:~/home/LinuxAssignment/file1.txt$ cat file1.txt
+
+This is the file1satyam@TUF:~/home/LinuxAssignment/file1.txt$ cd ..
+satyam@TUF:~/home/LinuxAssignment$ mkdir docs
+satyam@TUF:~/home/LinuxAssignment$ cp file1.txt docs/file2.txt
+cp: -r not specified; omitting directory 'file1.txt'
+satyam@TUF:~/home/LinuxAssignment$ ls docs
+satyam@TUF:~/home/LinuxAssignment$ ls
+docs  file1.txt
+satyam@TUF:~/home/LinuxAssignment$ cd docs
+satyam@TUF:~/home/LinuxAssignment/docs$ cp file1.txt docs/file2.txt
+cp: cannot stat 'file1.txt': No such file or directory
+satyam@TUF:~/home/LinuxAssignment/docs$ cd ..
+satyam@TUF:~/home/LinuxAssignment$ cp file1.txt docs/
+cp: -r not specified; omitting directory 'file1.txt'
+satyam@TUF:~/home/LinuxAssignment$ ls -l file1.txt
+total 4
+-rw-r--r-- 1 satyam satyam 18 Mar  7 19:21 file1.txt
+satyam@TUF:~/home/LinuxAssignment$ cd file1.txt
+satyam@TUF:~/home/LinuxAssignment/file1.txt$ ls -l file1.txt
+-rw-r--r-- 1 satyam satyam 18 Mar  7 19:21 file1.txt
+satyam@TUF:~/home/LinuxAssignment/file1.txt$ cd ..
+satyam@TUF:~/home/LinuxAssignment$ cp -r file1.txt docs/file2.txt
+satyam@TUF:~/home/LinuxAssignment$ ls
+docs  file1.txt
+satyam@TUF:~/home/LinuxAssignment$ cd docs
+satyam@TUF:~/home/LinuxAssignment/docs$ ls
+file2.txt
+satyam@TUF:~/home/LinuxAssignment/docs$ cd file2.txt
+satyam@TUF:~/home/LinuxAssignment/docs/file2.txt$ cat file2.txt
+cat: file2.txt: No such file or directory
+satyam@TUF:~/home/LinuxAssignment/docs/file2.txt$ cd ..
+satyam@TUF:~/home/LinuxAssignment/docs$ cat file2.txt
+cat: file2.txt: Is a directory
+satyam@TUF:~/home/LinuxAssignment/docs$ cd ..
+satyam@TUF:~/home/LinuxAssignment$ mv file1.txt file1.txt.bak
+satyam@TUF:~/home/LinuxAssignment$ touch file1.txt
+satyam@TUF:~/home/LinuxAssignment$ ls
+docs  file1.txt  file1.txt.bak
+satyam@TUF:~/home/LinuxAssignment$ cd file1.txt
+-bash: cd: file1.txt: Not a directory
+satyam@TUF:~/home/LinuxAssignment$ -bash file1.txt
+Command '-bash' not found, did you mean:
+  command 'rbash' from deb bash (5.1-6ubuntu1)
+  command 'bash' from deb bash (5.1-6ubuntu1)
+Try: sudo apt install <deb name>
+satyam@TUF:~/home/LinuxAssignment$ sudo apt install rbash
+[sudo] password for satyam:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package rbash
+satyam@TUF:~/home/LinuxAssignment$ cat file1.txt
+satyam@TUF:~/home/LinuxAssignment$ ls
+docs  file1.txt  file1.txt.bak
+satyam@TUF:~/home/LinuxAssignment$ cat > file1.txt
+This file has no content. It's made for testing purposesatyam@TUF:~/home/LinuxAssignment$ cat file1.txt
+This file has no content. It's made for testing purposesatyam@TUF:~/home/LinuxAssignment$ ls
+docs  file1.txt  file1.txt.bak
+satyam@TUF:~/home/LinuxAssignment$ cp file1.txt docs/file2.txt
+satyam@TUF:~/home/LinuxAssignment$ ls docs
+file2.txt
+satyam@TUF:~/home/LinuxAssignment$ cat file2.txt
+cat: file2.txt: No such file or directory
+satyam@TUF:~/home/LinuxAssignment$ cd docs
+satyam@TUF:~/home/LinuxAssignment/docs$ cat file2.txt
+cat: file2.txt: Is a directory
+satyam@TUF:~/home/LinuxAssignment/docs$ cd ..
+satyam@TUF:~/home/LinuxAssignment$ mv docs/file1.txt docs/file2.txt
+mv: cannot stat 'docs/file1.txt': No such file or directory
+satyam@TUF:~/home/LinuxAssignment$ mv file1.txt docs/file2.txt
+satyam@TUF:~/home/LinuxAssignment$ ls docs
+file2.txt
+satyam@TUF:~/home/LinuxAssignment$ cd docs
+satyam@TUF:~/home/LinuxAssignment/docs$ cat file2.txt
+cat: file2.txt: Is a directory
+satyam@TUF:~/home/LinuxAssignment/docs$ cd ..
+satyam@TUF:~/home/LinuxAssignment$ cp file1.txt docs/file2.txt
+cp: cannot stat 'file1.txt': No such file or directory
+satyam@TUF:~/home/LinuxAssignment$ cp file1.txt docs/file2.txt
+cp: cannot stat 'file1.txt': No such file or directory
+satyam@TUF:~/home/LinuxAssignment$
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------
+this answer works well
+
+satyam@TUF:~/home/LinuxAssignment$ cd ..
+satyam@TUF:~/home$ ls
+LinuxAssignment  hushlogin
+satyam@TUF:~/home$ cd LinuxAssignment
+satyam@TUF:~/home/LinuxAssignment$ nano file1.txt
+satyam@TUF:~/home/LinuxAssignment$ ls
+file1.txt
+satyam@TUF:~/home/LinuxAssignment$ cat file1.txt
+This is the sample text.....
+The content is for testing purpose only...
+Thank You!!!
+satyam@TUF:~/home/LinuxAssignment$ mkdir docs
+satyam@TUF:~/home/LinuxAssignment$ cp file1.txt docs/file2.txt
+satyam@TUF:~/home/LinuxAssignment$ cd docs
+satyam@TUF:~/home/LinuxAssignment/docs$ ls
+file2.txt
+satyam@TUF:~/home/LinuxAssignment/docs$ cat file2.txt
+This is the sample text.....
+The content is for testing purpose only...
+Thank You!!!
+satyam@TUF:~/home/LinuxAssignment/docs$
+satyam@TUF:~/home/LinuxAssignment/docs$ chmod 744 file2.txt
+satyam@TUF:~/home/LinuxAssignment/docs$ ls -l file2.txt
+-rwxr--r-- 1 satyam satyam 85 Mar  7 21:04 file2.txt
+satyam@TUF:~/home/LinuxAssignment/docs$
+
+
+--------------------------------------------------------------------------
