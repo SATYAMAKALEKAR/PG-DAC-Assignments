@@ -1,0 +1,165 @@
+Assignment 1
+
+//question 2
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+       	int year = scanner.nextInt();
+	System.out.print("Enter the year: ");
+
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year+ " is a leap year.");
+        } else {
+            System.out.println(year+ " is not a leap year.");
+        }
+
+Que 2 switch case
+
+import java.util.Scanner;
+
+public class LeapYear {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int year = scanner.nextInt();
+
+	System.out.print("Enter the year: ");
+        switch (year % 4) {
+            case 1 :
+                if (year % 100 != 0 || year % 400 == 0) {
+                    System.out.println(year+ " is a leap year.");
+                } else {
+                    	System.out.println(year+ " is not a leap year.");
+                }
+                
+			break;
+            	default:
+                System.out.println(year+ " is not a leap year.");
+                break;
+        }
+
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+Question 3
+
+
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+       
+	Scanner scanner = new Scanner(System.in);
+
+
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Enter the operator (+, -, *, /");
+        char operator = scanner.next().charAt(0);
+
+
+        System.out.print("Enter the second number:");
+        int num2 = scanner.nextInt();
+
+        int res = 0; {
+            case '+':
+                res = num1 + num2;
+                 break;
+            case '-':
+                res = num1 - num2;
+                 break;
+            case '*':
+                res = num1 * num2;
+                 break;
+            case '/':
+                if (num2 != 0) {
+                    result = num1 / num2;
+                } else {
+                    System.out.println("infinity");
+                    return;
+                }
+                break;
+            default:
+                System.out.println("Invalid operator");
+                return;
+        }
+
+               System.out.println("Result: " +res);
+
+      }
+}
+//////////////////////////////////////////////////////////////////////////////////
+
+Question4
+
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        
+
+	Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the weekday number (1-7): ");
+	
+        int weekdaynum = scanner.nextInt();
+
+      
+        switch (weekdaynum) {
+            case 1:
+                System.out.println("Monday");
+                	break;
+            case 2:
+                System.out.println("Tuesday");
+                	break;
+            case 3:
+                System.out.println("Wednesday");
+                	break;
+            case 4:
+                System.out.println("Thursday");
+                	break;
+            case 5:
+                System.out.println("Friday");
+               		 break;
+            case 6:
+                System.out.println("Saturday");
+                	break;
+            case 7:
+                System.out.println("Sunday");
+                	break;
+            default:
+                System.out.println("Invalid weekday number.");
+        }
+
+   
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+Question 5
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        
+
+	Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        char ch = scanner.next().charAt(0);
+	
+         if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+            ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+            System.out.println(ch + " is a vowel.");
+        } else {
+            System.out.println(ch+ " is a consonant.");
+        } 
+       
+    }
+}
